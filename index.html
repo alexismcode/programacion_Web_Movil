@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Móvil ITI</title>
+    <link rel="shortcut icon" href="/assets/images//favicon.ico">
+    <style>
+        img{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="" alt="Logo de la empresa">
+            <ul>
+                <li>Desayunar</li>
+                <li>Gimnasio</li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <aside></aside>
+    <footer></footer>
+</body>
+<script>
+    const img = document.querySelector('img');
+    console.log(img);
+    const API = 'https://api.thecatapi.com/v1/images/search';
+    const res = async () => { 
+        const response = await fetch(API);
+        const data = await response.json();
+        img.src = data[0].url;
+        console.log(data);
+    }
+    res();
+</script>
+</html>
