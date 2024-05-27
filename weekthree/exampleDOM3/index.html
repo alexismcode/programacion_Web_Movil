@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitar Propagación</title>
+    <style>
+        body{
+            align-items: center;
+            background-color: #bbf4c9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        h1{
+            margin-top: 50px;
+            color: #4aa160;
+            font-size: 40px;
+        }
+        p{
+            font-size: 35px;
+            width: 50%;
+            text-align: justify;
+        }
+        div{
+            display: flex;
+            gap: 50px;
+        }
+        button{
+            background-color: #4aa160;
+            border: 5px solid #377546;
+            border-radius: 30px;
+            color: #bbf4c9;
+            font-size: 40px;
+            margin-top: 100px;
+            padding: 15px;
+        }
+        button:hover{
+            background-color: #377546;
+            border: 5px solid #12381b;
+            color: #bbf4c9;
+            cursor: pointer;
+        }
+        h6{
+            color: #4aa160;
+            font-size: 20px;
+            position: absolute;
+            bottom: 0;
+            right: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 3: Evitar la propagación de eventos</h1>
+    <p>Este código muestra cómo evitar que un evento se propague a elementos padre utilizando <b>`event.stopPropagation()`</b> en el hijo.</p>
+    <div>
+        <button id="padre">PADRE</button>
+        <button id="hijo">HIJO</button>
+    </div>
+    <h6>Realizado por Alexis Sánchez</h6>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
