@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Móvil ITI</title>
-    <link rel="shortcut icon" href="/assets/images//favicon.ico">
-    <style>
-        img{
-            height: 500px;
-            width: 500px;
-        }
-    </style>
+    <title>Futurama API - Alexis Sánchez</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="icon" type="image/jpg" href="/assets/images/logo.png"/>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <img src="" alt="Logo de la empresa">
-            <ul>
-                <li>Desayunar</li>
-                <li>Gimnasio</li>
-            </ul>
-        </nav>
+        <img class="logo" src="/assets/images/logo.png" alt="">
+        <a class="charactersRedirect" href="#characters">Personajes</a>
     </header>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    <div class="home">
+        <img class="wallpaper" src="/assets/images/wallpaper.jpg" alt="">
+        <figure class="space"></figure>
+    </div>
+    <main class="body">
+        <section class="caption">
+            <img class="ship" src="/assets/images/icon.png" alt="">
+            <h2 class="title">PERSONAJES</h2>
+        </section>
+
+        <!-- Uso del API -->
+        <section id="characters">
+        </section>
+    </main>
+    <figure class="elipse-1"></figure>
+
+    <nav>
+        <h2 class="contact">CONTACTAME</h2>
+        <ul>
+            <a class="icons" href="https://github.com/alexismcode" target="_blank"><img src="/assets/icons/icons8-github-64.png" alt=""></a>
+            <a class="icons" href="https://www.instagram.com/alexismcode/" target="_blank"><img src="/assets/icons/icons8-instagram-50.png" alt=""></a>
+            <a class="icons" href="https://www.linkedin.com/in/alexismcode/" target="_blank"><img src="/assets/icons/icons8-linkedin-50.png" alt=""></a>
+            <a class="icons" href="mailto:alexismcode@gmail.com" target="_blank"><img src="/assets/icons/icons8-gmail-nuevo-50.png" alt=""></a>
+        </ul>
+    </nav>
+    <figure class="elipse-2"></figure>
+    <footer>
+        <h3>Copyright© 2024 | Designed by <a href="https://github.com/alexismcode" target="_blank">alexismcode</a></h3>
+    </footer>
+
+    <script src="./app.js"></script>
 </body>
-<script>
-    const img = document.querySelector('img');
-    console.log(img);
-    const API = 'https://api.thecatapi.com/v1/images/search';
-    const res = async () => { 
-        const response = await fetch(API);
-        const data = await response.json();
-        img.src = data[0].url;
-        console.log(data);
-    }
-    res();
-</script>
 </html>
